@@ -73,6 +73,8 @@ namespace DZ_OTUS_Files
             FileInfo[] files = directory.GetFiles();
             foreach (FileInfo file in files)
             {
+                if (file.IsReadOnly is false) 
+                { 
                 try
                 {
 
@@ -87,6 +89,7 @@ namespace DZ_OTUS_Files
                 {
 
                     Console.WriteLine(ex.Message); ;
+                }
                 }
 
             }
